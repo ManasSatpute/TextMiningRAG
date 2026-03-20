@@ -1,18 +1,15 @@
 import json
 import uuid
 from typing import List, Dict
+from backend.Constants import CORPUS_PATH
 
 
-# -----------------------------
-# Helper: create unique IDs
-# -----------------------------
+# Method to create unique IDs
 def generate_id():
     return str(uuid.uuid4())
 
 
-# -----------------------------
-# Core chunking function
-# -----------------------------
+# Main Method for Chunking in 3 parts: description, ingredients, steps
 def chunk_recipe(recipe: Dict, max_steps_per_chunk: int = 4) -> List[Dict]:
     chunks = []
 
@@ -24,16 +21,14 @@ def chunk_recipe(recipe: Dict, max_steps_per_chunk: int = 4) -> List[Dict]:
     steps = recipe.get("steps", [])
     url = recipe.get("url", "")
 
-    # -------------------------
     # 1. Description Chunk
-    # -------------------------
     desc_text = f"""Cuisine: {cuisine}
-Subcuisine: {subcuisine}
-Recipe: {name}
+    Subcuisine: {subcuisine}
+    Recipe: {name}
 
-Description:
-{description}
-"""
+    Description:
+    {description}
+    """
 
     chunks.append({
         "id": generate_id(),
@@ -47,16 +42,14 @@ Description:
         }
     })
 
-    # -------------------------
     # 2. Ingredients Chunk
-    # -------------------------
     ingredients_text = "\n".join([f"- {ing}" for ing in ingredients])
 
     ing_text = f"""Recipe: {name}
 
-Ingredients:
-{ingredients_text}
-"""
+    Ingredients:
+    {ingredients_text}
+    """
 
     chunks.append({
         "id": generate_id(),
@@ -70,9 +63,7 @@ Ingredients:
         }
     })
 
-    # -------------------------
-    # 3. Steps Chunk (split)
-    # -------------------------
+    # 3. Steps Chunk
     if steps:
         for i in range(0, len(steps), max_steps_per_chunk):
             step_group = steps[i:i + max_steps_per_chunk]
@@ -83,9 +74,9 @@ Ingredients:
 
             chunk_text = f"""Recipe: {name}
 
-Steps (Part {i // max_steps_per_chunk + 1}):
-{step_text}
-"""
+            Steps (Part {i // max_steps_per_chunk + 1}):
+            {step_text}
+            """
 
             chunks.append({
                 "id": generate_id(),
@@ -102,9 +93,7 @@ Steps (Part {i // max_steps_per_chunk + 1}):
     return chunks
 
 
-# -----------------------------
-# Load + chunk entire corpus
-# -----------------------------
+# Method to load corpus and apply chunking to each recipe
 def load_and_chunk_corpus(json_path: str) -> List[Dict]:
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -118,15 +107,13 @@ def load_and_chunk_corpus(json_path: str) -> List[Dict]:
     return all_chunks
 
 
-# -----------------------------
-# Debug / test run
-# -----------------------------
+# Method to save chunks to a JSON file
 if __name__ == "__main__":
-    chunks = load_and_chunk_corpus("D:\\MSc Adv Computer Science\\Transforming Text Into Meaning\\TextMiningRAG\\backend\\data\\corpus.json")
+    chunks = load_and_chunk_corpus(CORPUS_PATH)
 
     print(f"Total chunks created: {len(chunks)}\n")
 
-    # print sample
+    # print sample (TODO: remove this in production)
     for c in chunks[:3]:
         print("=" * 50)
         print(c["text"])

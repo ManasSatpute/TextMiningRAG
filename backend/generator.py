@@ -1,90 +1,95 @@
-from typing import List, Dict
-from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from .retriever import retriever
 
 
-# -----------------------------
-# Config
-# -----------------------------
-MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
-
-
-# -----------------------------
-# Generator class
-# -----------------------------
 class Generator:
-    def __init__(self):
+    def __init__(self, model_name = llm_model_name):
         print("🔹 Loading Qwen model...")
 
-        self.tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        # Load tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+        # 🔥 Fix for Qwen (important)
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+
+        # Detect device
+        if torch.cuda.is_available():
+            self.device = "cuda"
+            dtype = torch.float16
+        else:
+            self.device = "cpu"
+            dtype = torch.float32
+
+        print(f"🔹 Using device: {self.device}")
+
+        # 🔥 SAFE model loading (no meta tensor issues)
         self.model = AutoModelForCausalLM.from_pretrained(
-            MODEL_NAME,
-            torch_dtype=torch.float32,
-            device_map="auto"
+            model_name,
+            dtype=dtype,
+            device_map="auto" if self.device == "cuda" else None,
+            offload_folder="offload" if self.device == "cuda" else None,
+            offload_state_dict=True if self.device == "cuda" else False
         )
 
-    # -------------------------
-    # Build prompt
-    # -------------------------
-    def build_prompt(self, query: str, chunks: List[Dict]) -> str:
-        context = "\n\n".join(
-            [f"[Chunk {i+1}]\n{c['text']}" for i, c in enumerate(chunks)]
-        )
+        # If CPU, explicitly move model
+        if self.device == "cpu":
+            self.model.to(self.device)
 
-        prompt = f"""
-You are a helpful cooking assistant.
+        print("✅ Model loaded successfully!\n")
 
-Use ONLY the provided context to answer the question.
-If the answer is not in the context, say "I don't know".
+    def build_prompt(self, query, chunks):
+        context = "\n\n".join(chunks)
 
-Context:
-{context}
+        prompt = f"""You are a helpful AI assistant. Answer the question based only on the provided context.
 
-Question:
-{query}
+        Context:
+        {context}
 
-Instructions:
-- Be concise
-- Use bullet points for ingredients
-- Use numbered steps for cooking instructions
+        Question:
+        {query}
 
-Answer:
-"""
-        return prompt.strip()
+        Answer:"""
 
-    # -------------------------
-    # Generate answer
-    # -------------------------
-    def generate(self, query: str, chunks: List[Dict], max_tokens: int = 256):
+        return prompt
+
+    def generate(self, query, chunks):
         prompt = self.build_prompt(query, chunks)
 
-        inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
-
-        outputs = self.model.generate(
-            **inputs,
-            max_new_tokens=max_tokens,
-            do_sample=False,
-            temperature=0.0
+        inputs = self.tokenizer(
+            prompt,
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=2048
         )
+
+        # Move inputs to correct device
+        inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+
+        with torch.no_grad():
+            outputs = self.model.generate(
+                **inputs,
+                max_new_tokens=200,   # 🔥 prevents hanging
+                do_sample=False,      # deterministic, no warnings
+                pad_token_id=self.tokenizer.eos_token_id
+            )
 
         response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-        # remove prompt from output
-        answer = response[len(prompt):].strip()
+        # Extract only the answer part
+        if "Answer:" in response:
+            response = response.split("Answer:")[-1].strip()
 
-        return answer
+        return response
 
 
-# -----------------------------
-# Debug
-# -----------------------------
+# 🔹 Example usage
 if __name__ == "__main__":
-    from retriever import Retriever
-
-    retriever = Retriever()
     generator = Generator()
 
-    query = "How do I cook carbonara?"
+    query = "How to make jalebi?"
 
     chunks = retriever.get_top_chunks(query)
 

@@ -1,7 +1,8 @@
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from backend.Constants import transformer_model_name
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer(transformer_model_name)
 
 def evaluate(predictions, references):
     scores = []

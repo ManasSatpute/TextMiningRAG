@@ -4,26 +4,13 @@ import faiss
 import numpy as np
 from typing import List, Dict
 from sentence_transformers import SentenceTransformer
-
+from backend.Constants import (CORPUS_PATH, INDEX_DIR, CHUNKS_PATH, embedding_model_name)
 from chunking import load_and_chunk_corpus
 
-
-# -----------------------------
-# Config
-# -----------------------------
-CORPUS_PATH = "D:\\MSc Adv Computer Science\\Transforming Text Into Meaning\\TextMiningRAG\\backend\\data\\corpus.json"
-INDEX_DIR = "D:\\MSc Adv Computer Science\\Transforming Text Into Meaning\\TextMiningRAG\\backend\\faiss_index"
-CHUNKS_PATH = "D:\\MSc Adv Computer Science\\Transforming Text Into Meaning\\TextMiningRAG\\backend\\data\\chunks.json"
-
-EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-
-
-# -----------------------------
-# Load embedding model
-# -----------------------------
+# Method to Load embedding model
 def load_model():
     print("🔹 Loading embedding model...")
-    model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+    model = SentenceTransformer(embedding_model_name)
     return model
 
 
@@ -46,9 +33,7 @@ def embed_chunks(model, chunks: List[Dict]) -> np.ndarray:
     return embeddings
 
 
-# -----------------------------
-# Build FAISS index
-# -----------------------------
+# Method to Build FAISS index
 def build_faiss_index(embeddings: np.ndarray):
     dim = embeddings.shape[1]
 
@@ -60,9 +45,7 @@ def build_faiss_index(embeddings: np.ndarray):
     return index
 
 
-# -----------------------------
-# Save FAISS index + metadata
-# -----------------------------
+# Method to Save FAISS index and metadata
 def save_index(index, chunks: List[Dict]):
     os.makedirs(INDEX_DIR, exist_ok=True)
     os.makedirs(os.path.dirname(CHUNKS_PATH), exist_ok=True)
@@ -102,8 +85,6 @@ def run_ingestion():
     print("🎉 Ingestion complete!")
 
 
-# -----------------------------
-# Run
-# -----------------------------
+# Method to run the ingestion pipeline
 if __name__ == "__main__":
     run_ingestion()

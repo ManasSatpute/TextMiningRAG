@@ -3,14 +3,10 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from backend.retriever import ask
 
-# -----------------------------
 # Create FastAPI app
-# -----------------------------
 app = FastAPI()
 
-# -----------------------------
 # Enable CORS (for React UI)
-# -----------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -18,17 +14,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# -----------------------------
 # Root endpoint (optional)
-# -----------------------------
 @app.get("/")
 def home():
     return {"message": "RAG API is running 🚀"}
 
 
-# -----------------------------
 # Chat endpoint (UI)
-# -----------------------------
 class Query(BaseModel):
     question: str
 
@@ -38,9 +30,7 @@ def chat(q: Query):
     return ask(q.question)
 
 
-# -----------------------------
-# Batch endpoint (COURSEWORK)
-# -----------------------------
+# Batch endpoint
 class BatchQuery(BaseModel):
     queries: list
 
