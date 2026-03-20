@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from backend.retriever import retriever
-from backend.Constants import llm_model_name
+from backend.Constants import LLM_MODEL_NAME
 
 
 class Generator:
@@ -10,7 +10,7 @@ class Generator:
     answers using retrieved context (RAG generation step).
     """
 
-    def __init__(self, model_name=llm_model_name, cuisine="South Asian"):
+    def __init__(self, model_name=LLM_MODEL_NAME, cuisine="South Asian"):
         """
         Initialize tokenizer and model, and configure device.
 
