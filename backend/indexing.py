@@ -4,13 +4,13 @@ import faiss
 import numpy as np
 from typing import List, Dict
 from sentence_transformers import SentenceTransformer
-from backend.Constants import (CORPUS_PATH, INDEX_DIR, CHUNKS_PATH, embedding_model_name)
+from Constants import (CORPUS_PATH, INDEX_DIR, CHUNKS_PATH, EMBEDDING_MODEL_NAME)
 from chunking import load_and_chunk_corpus
 
 # Method to Load embedding model
 def load_model():
     print("🔹 Loading embedding model...")
-    model = SentenceTransformer(embedding_model_name)
+    model = SentenceTransformer(EMBEDDING_MODEL_NAME)
     return model
 
 

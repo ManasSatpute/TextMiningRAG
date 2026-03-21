@@ -1,7 +1,7 @@
 import json
 import uuid
 from typing import List, Dict
-from backend.Constants import CORPUS_PATH
+from Constants import CORPUS_PATH
 
 
 # Method to create unique IDs
