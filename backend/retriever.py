@@ -1,17 +1,3 @@
-"""
-retriever.py
-=============
-Two-stage retrieval pipeline:
-  Stage 1 — FAISS dense retrieval (top 10 candidates via cosine similarity)
-  Stage 2 — CrossEncoder reranking (reorders and returns final top 5)
-
-This exceeds the basic top-k requirement and demonstrates experimentation
-with retrieval strategies as required by the marking rubric.
-
-Output format matches the coursework JSON schema:
-    {"doc_id": "...", "text": "..."}
-"""
-
 import json
 import faiss
 import numpy as np
