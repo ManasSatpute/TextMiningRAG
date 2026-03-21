@@ -1,0 +1,254 @@
+{
+  "answers": [
+    {
+      "query_id": "0",
+      "query": "What is Hyderabadi Haleem?",
+      "gold_answer": "A savory, high-calorie porridge made of meat, lentils, and pounded wheat, traditionally slow-cooked for several hours."
+    },
+    {
+      "query_id": "1",
+      "query": "What are the main ingredients in Mantu?",
+      "gold_answer": "The main ingredients in Mantu include Wonton wrappers, Minced beef or lamb, Onions, Garlic, Yogurt, Dried mint."
+    },
+    {
+      "query_id": "2",
+      "query": "How do you start preparing Bamboo Shoot Curry?",
+      "gold_answer": "Clean and slice the bamboo shoots thin."
+    },
+    {
+      "query_id": "3",
+      "query": "How is Obbattu / Holige served or finished?",
+      "gold_answer": "Cook on a hot griddle with ghee until golden spots appear."
+    },
+    {
+      "query_id": "4",
+      "query": "What is Sylheti Tangy Curry?",
+      "gold_answer": "A light and refreshing tomato-based curry featuring a strong garlic tempering, often served as a side to balance heavier meat dishes."
+    },
+    {
+      "query_id": "5",
+      "query": "What are the main ingredients in Carrot Beans Sabzi?",
+      "gold_answer": "The main ingredients in Carrot Beans Sabzi include Carrots, French beans, Mustard seeds, Grated coconut (optional), Turmeric, Green chilies."
+    },
+    {
+      "query_id": "6",
+      "query": "How do you start preparing Dal Baati Churma?",
+      "gold_answer": "Make stiff dough balls (Baati) and bake them until golden; soak in ghee."
+    },
+    {
+      "query_id": "7",
+      "query": "How is Dalma served or finished?",
+      "gold_answer": "Garnish with freshly grated coconut and roasted cumin powder."
+    },
+    {
+      "query_id": "8",
+      "query": "What is Lachha Paratha?",
+      "gold_answer": "A multi-layered, flaky wheat flatbread where 'Lachha' refers to the ring-like layers visible after cooking."
+    },
+    {
+      "query_id": "9",
+      "query": "What are the main ingredients in Sattu Paratha?",
+      "gold_answer": "The main ingredients in Sattu Paratha include Whole wheat flour, Sattu, Pickle masala (Achar), Mustard oil, Garlic, Onions."
+    },
+    {
+      "query_id": "10",
+      "query": "How do you start preparing Rajma Chawal?",
+      "gold_answer": "Soak rajma overnight and pressure cook until soft."
+    },
+    {
+      "query_id": "11",
+      "query": "How is Butter Chicken (Murgh Makhani) served or finished?",
+      "gold_answer": "Add the grilled chicken pieces and simmer until the gravy is velvety."
+    },
+    {
+      "query_id": "12",
+      "query": "What is Sai Bhaji?",
+      "gold_answer": "A healthy Sindhi vegan curry consisting of spinach, lentils, and an assortment of seasonal vegetables."
+    },
+    {
+      "query_id": "13",
+      "query": "What are the main ingredients in Mysore Pak?",
+      "gold_answer": "The main ingredients in Mysore Pak include Besan (Gram flour), Ghee, Sugar, Water."
+    },
+    {
+      "query_id": "14",
+      "query": "How do you start preparing Korma-e-Gulpi?",
+      "gold_answer": "Sauté onions until golden, then brown the meat with ginger-garlic paste."
+    },
+    {
+      "query_id": "15",
+      "query": "How is Bolani served or finished?",
+      "gold_answer": "Shallow-fry on a flat griddle (tawa) until golden and crispy on both sides."
+    },
+    {
+      "query_id": "16",
+      "query": "What is Chicken Sukka (Kori Ajadina)?",
+      "gold_answer": "A dry Mangalorean chicken dish where the meat is coated in a coarse mixture of roasted coconut and spices."
+    },
+    {
+      "query_id": "17",
+      "query": "What are the main ingredients in Rogan Josh?",
+      "gold_answer": "The main ingredients in Rogan Josh include Lamb meat, Kashmiri red chilies, Yogurt, Fennel powder, Ginger powder, Heeng (Asafoetida)."
+    },
+    {
+      "query_id": "18",
+      "query": "How do you start preparing Thepla?",
+      "gold_answer": "Mix flour, besan, finely chopped methi leaves, and spices."
+    },
+    {
+      "query_id": "19",
+      "query": "How is Masyaura (Nepali Fermented Vegetable Balls) served or finished?",
+      "gold_answer": "Store in an airtight container for use in winter stews."
+    },
+    {
+      "query_id": "20",
+      "query": "What is Dahi Puri?",
+      "gold_answer": "A popular chaat dish consisting of crispy puffed puris filled with potatoes, chickpeas, and topped with a generous amount of sweetened yogurt and chutneys."
+    },
+    {
+      "query_id": "21",
+      "query": "What are the main ingredients in Phirni?",
+      "gold_answer": "The main ingredients in Phirni include Basmati rice (soaked and ground), Full-fat milk, Sugar, Saffron, Cardamom powder."
+    },
+    {
+      "query_id": "22",
+      "query": "How do you start preparing Besan Ladoo?",
+      "gold_answer": "Roast besan in ghee on low heat for 20-30 minutes until it turns aromatic and golden brown."
+    },
+    {
+      "query_id": "23",
+      "query": "How is Appam served or finished?",
+      "gold_answer": "Cover and steam-cook for 2 minutes until the center is set and edges are brown."
+    },
+    {
+      "query_id": "24",
+      "query": "What is Khaja?",
+      "gold_answer": "A multi-layered, crispy, fried pastry soaked in sugar syrup, traditional to the Jagannath Temple in Puri."
+    },
+    {
+      "query_id": "25",
+      "query": "What are the main ingredients in Coconut Ladoo?",
+      "gold_answer": "The main ingredients in Coconut Ladoo include Grated coconut, Condensed milk or Sugar, Cardamom, Ghee."
+    },
+    {
+      "query_id": "26",
+      "query": "How do you start preparing Chapati (Phulka)?",
+      "gold_answer": "Knead flour, salt, and water into a smooth, soft dough; let it rest for 15 minutes."
+    },
+    {
+      "query_id": "27",
+      "query": "How is Sheer Khira served or finished?",
+      "gold_answer": "Pour into bowls and cover the entire surface with crushed pistachios."
+    },
+    {
+      "query_id": "28",
+      "query": "What is Litti Chokha?",
+      "gold_answer": "A traditional complete meal consisting of dough balls made of whole wheat flour, stuffed with sattu (roasted gram flour), and served with mashed vegetables (chokha)."
+    },
+    {
+      "query_id": "29",
+      "query": "What are the main ingredients in Reshmi Kebab?",
+      "gold_answer": "The main ingredients in Reshmi Kebab include Chicken breast cubes, Heavy cream, Yogurt, Cashew nut paste, Green chili paste, Ginger-garlic paste."
+    },
+    {
+      "query_id": "30",
+      "query": "How do you start preparing Coconut Chicken Curry?",
+      "gold_answer": "Temper mustard, cumin, and fennel seeds in oil until they splutter."
+    },
+    {
+      "query_id": "31",
+      "query": "How is Paniyaram served or finished?",
+      "gold_answer": "Flip using a wooden skewer and cook the other side until crisp."
+    },
+    {
+      "query_id": "32",
+      "query": "What is Bedmi Puri?",
+      "gold_answer": "A popular breakfast dish consisting of a deep-fried, puffed bread made from wheat flour and ground urad dal spices."
+    },
+    {
+      "query_id": "33",
+      "query": "What are the main ingredients in Tandoori Chicken?",
+      "gold_answer": "The main ingredients in Tandoori Chicken include Chicken with bone, Yogurt, Kashmiri red chili powder, Lemon juice, Ginger-garlic paste, Garam masala."
+    },
+    {
+      "query_id": "34",
+      "query": "How do you start preparing Paneer Tikka?",
+      "gold_answer": "Cut paneer and vegetables into large cubes."
+    },
+    {
+      "query_id": "35",
+      "query": "How is Prawn Curry served or finished?",
+      "gold_answer": "Stir in the prawns and garam masala; simmer for 1 minute and garnish with coriander."
+    },
+    {
+      "query_id": "36",
+      "query": "What is Mango and Coconut Chutney (Am ki Chatni)?",
+      "gold_answer": "A tropical, sweet, and tangy relish made with ripe mangoes and fresh coconut, balanced with tempered spices."
+    },
+    {
+      "query_id": "37",
+      "query": "What are the main ingredients in Salty (Namkin) Lassi?",
+      "gold_answer": "The main ingredients in Salty (Namkin) Lassi include Fresh yogurt, Chilled water, Roasted cumin powder, Black salt (Kala Namak), Fresh mint leaves, Ice cubes."
+    },
+    {
+      "query_id": "38",
+      "query": "How do you start preparing Mihidana?",
+      "gold_answer": "Create a thin batter with rice flour, besan, and saffron water."
+    },
+    {
+      "query_id": "39",
+      "query": "How is Malai Roll served or finished?",
+      "gold_answer": "Chill before serving."
+    },
+    {
+      "query_id": "40",
+      "query": "What is Dum Aloo?",
+      "gold_answer": "Small potatoes that are deep-fried and then slow-cooked in a spicy, aromatic gravy under pressure (dum)."
+    },
+    {
+      "query_id": "41",
+      "query": "What are the main ingredients in Borani Banjan?",
+      "gold_answer": "The main ingredients in Borani Banjan include Eggplant, Tomatoes, Bell peppers, Garlic, Yogurt, Turmeric."
+    },
+    {
+      "query_id": "42",
+      "query": "How do you start preparing Peda (Mathura Peda)?",
+      "gold_answer": "Roast khoya in ghee on low flame until it turns a deep, reddish-brown."
+    },
+    {
+      "query_id": "43",
+      "query": "How is Egg Biryani served or finished?",
+      "gold_answer": "Steam on low heat for 15-20 minutes until the flavors meld."
+    },
+    {
+      "query_id": "44",
+      "query": "What is Ariselu / Adhirasam?",
+      "gold_answer": "A traditional festive sweet made from fermented rice flour and jaggery, deep-fried to a chewy, donut-like consistency."
+    },
+    {
+      "query_id": "45",
+      "query": "What are the main ingredients in Missi Roti?",
+      "gold_answer": "The main ingredients in Missi Roti include Besan (Gram flour), Whole wheat flour, Ajwain (Carom seeds), Kasoori methi, Onions, Green chilies."
+    },
+    {
+      "query_id": "46",
+      "query": "How do you start preparing Tibetan Meat Momos?",
+      "gold_answer": "Knead a simple dough of flour and water; let it rest for 30 minutes."
+    },
+    {
+      "query_id": "47",
+      "query": "How is Sabudana Kheer served or finished?",
+      "gold_answer": "Garnish with fried cashews."
+    },
+    {
+      "query_id": "48",
+      "query": "What is Dhansak?",
+      "gold_answer": "An essential Parsi Zoroastrian dish that combines Persian and Gujarati elements, consisting of lentils, vegetables, and meat."
+    },
+    {
+      "query_id": "49",
+      "query": "What are the main ingredients in Maddur Vada?",
+      "gold_answer": "The main ingredients in Maddur Vada include Rice flour, Maida, Semolina (Rava), Sliced onions, Green chilies, Curry leaves."
+    }
+  ]
+}

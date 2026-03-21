@@ -1,0 +1,204 @@
+{
+  "queries": [
+    {
+      "query_id": "0",
+      "query": "What is Hyderabadi Haleem?"
+    },
+    {
+      "query_id": "1",
+      "query": "What are the main ingredients in Mantu?"
+    },
+    {
+      "query_id": "2",
+      "query": "How do you start preparing Bamboo Shoot Curry?"
+    },
+    {
+      "query_id": "3",
+      "query": "How is Obbattu / Holige served or finished?"
+    },
+    {
+      "query_id": "4",
+      "query": "What is Sylheti Tangy Curry?"
+    },
+    {
+      "query_id": "5",
+      "query": "What are the main ingredients in Carrot Beans Sabzi?"
+    },
+    {
+      "query_id": "6",
+      "query": "How do you start preparing Dal Baati Churma?"
+    },
+    {
+      "query_id": "7",
+      "query": "How is Dalma served or finished?"
+    },
+    {
+      "query_id": "8",
+      "query": "What is Lachha Paratha?"
+    },
+    {
+      "query_id": "9",
+      "query": "What are the main ingredients in Sattu Paratha?"
+    },
+    {
+      "query_id": "10",
+      "query": "How do you start preparing Rajma Chawal?"
+    },
+    {
+      "query_id": "11",
+      "query": "How is Butter Chicken (Murgh Makhani) served or finished?"
+    },
+    {
+      "query_id": "12",
+      "query": "What is Sai Bhaji?"
+    },
+    {
+      "query_id": "13",
+      "query": "What are the main ingredients in Mysore Pak?"
+    },
+    {
+      "query_id": "14",
+      "query": "How do you start preparing Korma-e-Gulpi?"
+    },
+    {
+      "query_id": "15",
+      "query": "How is Bolani served or finished?"
+    },
+    {
+      "query_id": "16",
+      "query": "What is Chicken Sukka (Kori Ajadina)?"
+    },
+    {
+      "query_id": "17",
+      "query": "What are the main ingredients in Rogan Josh?"
+    },
+    {
+      "query_id": "18",
+      "query": "How do you start preparing Thepla?"
+    },
+    {
+      "query_id": "19",
+      "query": "How is Masyaura (Nepali Fermented Vegetable Balls) served or finished?"
+    },
+    {
+      "query_id": "20",
+      "query": "What is Dahi Puri?"
+    },
+    {
+      "query_id": "21",
+      "query": "What are the main ingredients in Phirni?"
+    },
+    {
+      "query_id": "22",
+      "query": "How do you start preparing Besan Ladoo?"
+    },
+    {
+      "query_id": "23",
+      "query": "How is Appam served or finished?"
+    },
+    {
+      "query_id": "24",
+      "query": "What is Khaja?"
+    },
+    {
+      "query_id": "25",
+      "query": "What are the main ingredients in Coconut Ladoo?"
+    },
+    {
+      "query_id": "26",
+      "query": "How do you start preparing Chapati (Phulka)?"
+    },
+    {
+      "query_id": "27",
+      "query": "How is Sheer Khira served or finished?"
+    },
+    {
+      "query_id": "28",
+      "query": "What is Litti Chokha?"
+    },
+    {
+      "query_id": "29",
+      "query": "What are the main ingredients in Reshmi Kebab?"
+    },
+    {
+      "query_id": "30",
+      "query": "How do you start preparing Coconut Chicken Curry?"
+    },
+    {
+      "query_id": "31",
+      "query": "How is Paniyaram served or finished?"
+    },
+    {
+      "query_id": "32",
+      "query": "What is Bedmi Puri?"
+    },
+    {
+      "query_id": "33",
+      "query": "What are the main ingredients in Tandoori Chicken?"
+    },
+    {
+      "query_id": "34",
+      "query": "How do you start preparing Paneer Tikka?"
+    },
+    {
+      "query_id": "35",
+      "query": "How is Prawn Curry served or finished?"
+    },
+    {
+      "query_id": "36",
+      "query": "What is Mango and Coconut Chutney (Am ki Chatni)?"
+    },
+    {
+      "query_id": "37",
+      "query": "What are the main ingredients in Salty (Namkin) Lassi?"
+    },
+    {
+      "query_id": "38",
+      "query": "How do you start preparing Mihidana?"
+    },
+    {
+      "query_id": "39",
+      "query": "How is Malai Roll served or finished?"
+    },
+    {
+      "query_id": "40",
+      "query": "What is Dum Aloo?"
+    },
+    {
+      "query_id": "41",
+      "query": "What are the main ingredients in Borani Banjan?"
+    },
+    {
+      "query_id": "42",
+      "query": "How do you start preparing Peda (Mathura Peda)?"
+    },
+    {
+      "query_id": "43",
+      "query": "How is Egg Biryani served or finished?"
+    },
+    {
+      "query_id": "44",
+      "query": "What is Ariselu / Adhirasam?"
+    },
+    {
+      "query_id": "45",
+      "query": "What are the main ingredients in Missi Roti?"
+    },
+    {
+      "query_id": "46",
+      "query": "How do you start preparing Tibetan Meat Momos?"
+    },
+    {
+      "query_id": "47",
+      "query": "How is Sabudana Kheer served or finished?"
+    },
+    {
+      "query_id": "48",
+      "query": "What is Dhansak?"
+    },
+    {
+      "query_id": "49",
+      "query": "What are the main ingredients in Maddur Vada?"
+    }
+  ]
+}
