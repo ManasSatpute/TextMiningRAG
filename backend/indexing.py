@@ -13,10 +13,7 @@ def load_model():
     model = SentenceTransformer(EMBED_MODEL_NAME)
     return model
 
-
-# -----------------------------
 # Embed chunks
-# -----------------------------
 def embed_chunks(model, chunks: List[Dict]) -> np.ndarray:
     print("🔹 Generating embeddings...")
 
@@ -52,23 +49,20 @@ def save_index(index, chunks: List[Dict]):
 
     index_path = os.path.join(INDEX_DIR, "index.faiss")
 
-    print(f"💾 Saving FAISS index to {index_path}")
-    faiss.write_index(index, index_path)
+    print(f"Saving FAISS index to {index_path}")
+    faiss.write_index(index, str(index_path))
 
-    print(f"💾 Saving chunks metadata to {CHUNKS_PATH}")
+    print(f"Saving chunks metadata to {CHUNKS_PATH}")
     with open(CHUNKS_PATH, "w", encoding="utf-8") as f:
         json.dump(chunks, f, indent=2, ensure_ascii=False)
 
-
-# -----------------------------
 # Main pipeline
-# -----------------------------
 def run_ingestion():
     print("🚀 Starting ingestion pipeline...")
 
     # 1. Chunk data
     chunks = load_and_chunk_corpus(CORPUS_PATH)
-    print(f"✅ Total chunks: {len(chunks)}")
+    print(f"Total chunks: {len(chunks)}")
 
     # 2. Load model
     model = load_model()
