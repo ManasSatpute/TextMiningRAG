@@ -16,7 +16,7 @@ from Constants import (
 class Retriever:
     def __init__(self):
         print("Loading FAISS index...")
-        self.index = faiss.read_index(INDEX_PATH)
+        self.index = faiss.read_index(str(INDEX_PATH))
 
         print("Loading chunks...")
         with open(CHUNKS_PATH, "r", encoding="utf-8") as f:
@@ -82,7 +82,7 @@ class Retriever:
         candidates = self.retrieve(query, top_k=TOP_K_RETRIEVE)
         reranked   = self.rerank(query, candidates, top_k=top_k)
 
-        # Format output to match coursework JSON schema
+    
         return [
             {
                 "doc_id": chunk["id"],
@@ -92,7 +92,6 @@ class Retriever:
         ]
 
 
-# ── Debug / Test ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     retriever = Retriever()
 
