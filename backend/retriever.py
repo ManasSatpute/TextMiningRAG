@@ -5,7 +5,7 @@ from typing import List, Dict
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from Constants import (
     CHUNKS_PATH,
-    EMBED_MODEL_NAME,
+    EMBEDDING_MODEL_NAME,
     RERANK_MODEL_NAME,
     INDEX_PATH,
     TOP_K_RETRIEVE,
@@ -23,7 +23,7 @@ class Retriever:
             self.chunks = json.load(f)
 
         print("Loading embedding model...")
-        self.embed_model = SentenceTransformer(EMBED_MODEL_NAME)
+        self.embed_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
         print("Loading reranker...")
         self.reranker = CrossEncoder(RERANK_MODEL_NAME)
